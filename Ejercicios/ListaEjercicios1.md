@@ -10,11 +10,19 @@ Ingrese la edad del usuario:
 Inserte 1 si el invitado trajo regalo; caso contrario, inserte 0:
 1
 ```
+En este caso, dado que la persona tiene una edad superior a los 15 años, es necesario llevar a cabo una validación adicional.
 ### Ejemplo de salida
 ```bash
-La persona sí puede ingresar a la fiesta.
+El invitado sí puede ingresar a la fiesta.
 ```
-
+### Ejemplo de entrada
+```bash
+13
+```
+### Ejemplo de salida
+```bash
+El invitado si puede ingresar a la fiesta
+```
 ## Ejercicio 3
 Implemente una aplicación que permita calcular el pago que debe realizar una familia por el consumo de agua potable. Se sabe que existe un pago fijo de $10.00 y que los primeros 50 litros de agua no tienen costo. Entre 51 y 200 litros se cobra $0.5 por litro, y más de 200 litros a $1.5 por litro.
 
