@@ -17,6 +17,7 @@ El invitado sí puede ingresar a la fiesta.
 ```
 ### Ejemplo de entrada
 ```bash
+Ingrese la edad del usuario:
 13
 ```
 ### Ejemplo de salida
