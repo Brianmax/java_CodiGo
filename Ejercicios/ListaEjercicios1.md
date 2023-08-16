@@ -23,7 +23,7 @@ $2240.0
 ```
 ### Ejemplo de salida
 ```
-$2740.0
+$2840.0
 ```
 # Ejercicio 2
 Se le pide implementar un sistema de ingreso digital para una fiesta de quince años. Para ello, se han determinado una serie de reglas. Todas las personas con edades mayores o iguales a 15 años solo pueden entrar si traen regalos. Los jóvenes menores de 15 años entran gratis a la fiesta. Implemente una aplicación que permita ingresar la edad de la persona y determine si puede pasar o no.
