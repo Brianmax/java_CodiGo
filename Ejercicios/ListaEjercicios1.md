@@ -66,9 +66,10 @@ Pago fijo.
 ```
 ### Ejemplo de salida
 ```
-$45.00 -> (10 + 0.5x(120-50)) 
+$45.00  
 ```
 Consumo entre 51 y 200
+$(10 + 0.5/times(120-50))$
 ### Ejemplo de entrada
 ```
 250
@@ -77,6 +78,7 @@ Consumo entre 51 y 200
 ```
 $185.00 -> (10 + 0.5x(250-50) + 1.5x(250-200))
 ```
+(10 + 0.5/times(250-50) + 1.5/times(250-200))
 # Ejercicio 4
 Escriba un programa que reciba un número `n` e imprima los números impares menores a `n`.
 
