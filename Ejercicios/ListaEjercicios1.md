@@ -202,19 +202,80 @@ Crea una clase Principal para demostrar el uso de tu jerarquía de figuras:
 
 [Generar getters y setters en Java](https://www.youtube.com/watch?v=gXvnHialu0s&ab_channel=makigas%3Aaprendeaprogramar)
 # Ejercicio 12
-Crea un sistema de biblioteca simple con las siguientes clases:
 
-LibraryItem (ElementoBiblioteca): Esta clase debe representar un elemento genérico de biblioteca, como un libro o un DVD. Debe tener campos privados para el título, el ID del elemento y si está prestado. Proporciona métodos para obtener y establecer estos campos, y un método para mostrar los detalles del elemento.
+## Descripción
 
-Book (Libro): Esta clase debe heredar de LibraryItem. Debe tener un campo privado adicional para el autor. Implementa constructores y métodos apropiados para obtener y establecer el autor, y anula el método para mostrar los detalles del elemento para incluir información del autor.
+Este ejercicio tiene como objetivo desarrollar un sistema de biblioteca simple que maneje libros, DVDs y usuarios utilizando principios de programación orientada a objetos como la herencia y el polimorfismo.
 
-DVD: Esta clase también debe heredar de LibraryItem. Debe tener campos privados adicionales para el director y la duración. Implementa constructores y métodos apropiados para obtener y establecer estos campos, y anula el método para mostrar los detalles del elemento para incluir información del director y la duración.
+## Clases
 
-LibraryUser (UsuarioBiblioteca): Esta clase debe representar a un usuario de la biblioteca. Debe tener campos privados para el nombre, el ID de usuario y los elementos prestados. Proporciona métodos para obtener y establecer estos campos, y un método para mostrar los detalles del usuario.
+### `LibraryItem` (ElementoBiblioteca)
+- **Descripción**: Clase base para ítems en la biblioteca.
+- **Atributos privados**:
+  - `title`: Título del ítem.
+  - `itemID`: ID único del ítem.
+  - `isLoaned`: Indica si el ítem está prestado.
+- **Métodos**:
+  - Getters y setters para los atributos.
+  - `showDetails()`: Método para mostrar los detalles del ítem.
 
-Ahora, crea una clase Library (Biblioteca) que tenga una matriz o una colección para almacenar elementos de la biblioteca. Implementa métodos para agregar nuevos elementos, mostrar todos los elementos, prestar un elemento a un usuario (actualizando el estado de préstamo), y devolver un elemento (actualizando el estado de préstamo). Implementa la polimorfia permitiendo a los usuarios tomar en préstamo tanto libros como DVDs.
+### `Book` (hereda de `LibraryItem`)
+- **Descripción**: Representa un libro en la biblioteca.
+- **Atributos privados adicionales**:
+  - `author`: Autor del libro.
+- **Métodos**:
+  - Constructores, getters y setters para el nuevo atributo.
+  - Sobrescritura del método `showDetails()` para incluir el autor del libro.
 
-Finalmente, crea una clase Main para demostrar el uso de tu sistema de biblioteca. En el método principal, crea instancias de libros, DVDs y usuarios, agrega elementos a la biblioteca, presta elementos a usuarios y muestra los detalles de elementos y usuarios.
+### `DVD` (hereda de `LibraryItem`)
+- **Descripción**: Representa un DVD en la biblioteca.
+- **Atributos privados adicionales**:
+  - `director`: Director del DVD.
+  - `duration`: Duración del DVD.
+- **Métodos**:
+  - Constructores, getters y setters para los nuevos atributos.
+  - Sobrescritura del método `showDetails()` para incluir el director y la duración.
+
+### `LibraryUser` (UsuarioBiblioteca)
+- **Descripción**: Representa a un usuario de la biblioteca.
+- **Atributos privados**:
+  - `userName`: Nombre del usuario.
+  - `userID`: ID del usuario.
+  - `loanedItems`: Ítems que el usuario tiene prestados.
+- **Métodos**:
+  - Getters y setters para los atributos.
+  - `showUserDetails()`: Método para mostrar los detalles del usuario.
+
+### `Library` (Biblioteca)
+- **Descripción**: Gestiona la colección de ítems de la biblioteca.
+- **Atributos**:
+  - `libraryItems`: Colección de `LibraryItems`.
+- **Métodos**:
+  - `addItem()`: Añadir nuevos ítems a la biblioteca.
+  - `showAllItems()`: Mostrar todos los ítems de la biblioteca.
+  - `loanItem()`: Prestar un ítem a un usuario.
+  - `returnItem()`: Devolver un ítem a la biblioteca.
+
+## Funcionalidad Principal
+
+En la clase `Main`, se deberá:
+
+- Instanciar varios libros y DVDs.
+- Crear usuarios de la biblioteca.
+- Añadir libros y DVDs a la colección de ítems de la biblioteca.
+- Prestar y devolver ítems a y de los usuarios.
+- Mostrar los detalles de los ítems y los usuarios.
+
+## Instrucciones Adicionales
+
+- Utilice polimorfismo para permitir el préstamo de diferentes tipos de `LibraryItems`.
+- Asegúrese de que todas las clases tengan una estructura coherente y métodos bien definidos.
+- Escriba el código en el lenguaje Java.
+
+---
+
+¡Buena suerte con la implementación de tu Sistema de Biblioteca Simple!
+
 
 
 ## Ejercicio 13
