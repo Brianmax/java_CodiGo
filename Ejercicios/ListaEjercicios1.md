@@ -351,3 +351,80 @@ En la clase `Main`, se deberá:
 - Utilice polimorfismo para manejar los distintos tipos de `CinemaItems`.
 - Asegúrese de que todas las clases tengan una estructura coherente y métodos bien definidos.
 - Escriba el código en el lenguaje de programación Java.
+  
+# Ejercicio 14
+
+## Descripción
+
+El objetivo de este ejercicio es desarrollar un sistema de control de inventarios para una tienda, utilizando interfaces para definir comportamientos comunes en diferentes categorías de productos.
+
+## Interfaces
+
+### `InventoryManageable`
+- **Descripción**: Interfaz para gestionar las operaciones básicas del inventario.
+- **Métodos**:
+  - `addItem()`: Añadir un nuevo ítem al inventario.
+  - `deleteItem()`: Eliminar un ítem del inventario.
+  - `listItems()`: Listar todos los ítems del inventario.
+  - `findItemById()`: Buscar un ítem por su ID.
+
+### `Priceable`
+- **Descripción**: Interfaz para manejar los precios de los ítems.
+- **Métodos**:
+  - `getPrice()`: Obtener el precio de un ítem.
+  - `setPrice()`: Establecer el precio de un ítem.
+
+## Clases
+
+### `Product` (implementa `Priceable`)
+- **Descripción**: Clase abstracta que representa un producto genérico de la tienda.
+- **Atributos protegidos**:
+  - `productId`: ID único del producto.
+  - `price`: Precio del producto.
+- **Métodos**:
+  - Implementación de los métodos de la interfaz `Priceable`.
+  - Otros métodos y atributos comunes a todos los productos.
+
+### `Electronics` (hereda de `Product`, implementa `InventoryManageable`)
+- **Descripción**: Representa un producto electrónico.
+- **Atributos adicionales**:
+  - `brand`: Marca del producto electrónico.
+  - `model`: Modelo del producto electrónico.
+- **Métodos**:
+  - Implementación de los métodos de la interfaz `InventoryManageable`.
+  - Constructores, getters y setters para los nuevos atributos.
+
+### `Clothing` (hereda de `Product`, implementa `InventoryManageable`)
+- **Descripción**: Representa un producto de ropa.
+- **Atributos adicionales**:
+  - `size`: Tamaño de la prenda de ropa.
+  - `material`: Material de la prenda de ropa.
+- **Métodos**:
+  - Implementación de los métodos de la interfaz `InventoryManageable`.
+  - Constructores, getters y setters para los nuevos atributos.
+
+### `Inventory` (implementa `InventoryManageable`)
+- **Descripción**: Gestiona la colección de productos en la tienda.
+- **Atributos**:
+  - `products`: Lista de productos que implementan `InventoryManageable`.
+- **Métodos**:
+  - Implementación de los métodos de la interfaz `InventoryManageable`.
+  - Métodos para reportes y análisis del inventario.
+
+## Funcionalidad Principal
+
+En la clase `Main`, se deberá:
+
+- Crear una instancia de `Inventory`.
+- Instanciar varios productos de `Electronics` y `Clothing`.
+- Añadir estos productos al inventario.
+- Listar todos los productos.
+- Buscar un producto por su ID y cambiar su precio.
+- Eliminar un producto del inventario.
+
+## Instrucciones Adicionales
+
+- Utilice las interfaces para definir comportamientos comunes y para lograr un bajo acoplamiento.
+- Implemente las clases concretas proporcionando funcionalidades específicas.
+- Asegúrese de que todas las clases e interfaces tengan una estructura coherente y métodos bien definidos.
+- Escriba el código en Java.
